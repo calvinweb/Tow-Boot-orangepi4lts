@@ -61,7 +61,7 @@ jobs:
   release:
     name: Release
     if: startsWith(github.ref, 'refs/tags/') && github.event_name != 'pull_request'
-    needs: [build-all-devices, docs]
+    needs: [build-orangepi4-lts, docs]
     runs-on: ubuntu-22.04
     steps:
       - name: Download archives from Artifacts
