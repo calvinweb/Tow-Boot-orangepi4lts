@@ -29,7 +29,6 @@ mkIf config.Tow-Boot.buildUBoot
   Tow-Boot.patches = []
   ++ fetchpatch {
       url = "https://github.com/calvinweb/Tow-Boot-orangepi4lts/raw/development/a.patch";
-      inherit sha256;
     }
   ++ optionals (versionOlder uBootVersion "2023.01") [
     # sunxi: Use mmc_get_env_dev only if relevant
