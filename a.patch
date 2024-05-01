@@ -1,5 +1,7 @@
---- /nix/store/rr7agg7azzq81ahzhx63ac3kppsrxcgb-source/arch/arm/dts/rk3399-rock-pi-4a.dts	1970-01-01 08:00:01.000000000 +0800
-+++ /home/calvin/orangepi4lts.dts	2024-05-01 00:25:04.170563818 +0800
+diff --git a/arch/arm/dts/rk3399-rock-pi-4a.dts b/arch/arm/dts/rk3399-rock-pi-4a.dts
+index 89f2af5e11..7e72d06cda 100644
+--- a/arch/arm/dts/rk3399-rock-pi-4a.dts
++++ b/arch/arm/dts/rk3399-rock-pi-4a.dts
 @@ -1,13 +1,4450 @@
 -// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 -/*
