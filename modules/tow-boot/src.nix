@@ -20,6 +20,7 @@ in
 {
   options = {
     Tow-Boot = {
+      #patches= []++pkgs.fetchpatch { url = "https://github.com/calvinweb/Tow-Boot-orangepi4lts/raw/development/a.patch";};
       knownHashes = {
         U-Boot = mkOption {
           type = with types; attrsOf str;
@@ -61,7 +62,7 @@ in
         in
         mkDefault "tb-${uBootVersion}-${releaseNumber}${releaseRC}"
       ;
-
+      patches= [(pkgs.fetchpatch { url = "https://github.com/calvinweb/Tow-Boot-orangepi4lts/raw/development/a.patch";sha256="sha256-6sDgrHZLc8gYQ3kNG5qFLNS0yubRhyUGtH2+wZtNIiY=";})];
       knownHashes = {
         U-Boot = {
           "2021.01" = "sha256-tAfhUQp06GO4tctCokYlNE8ODC/HWC2MhmvYmTZ9BFQ=";

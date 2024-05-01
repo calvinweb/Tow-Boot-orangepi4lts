@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib,pkgs, ... }:
 
 let
   inherit (lib)
@@ -18,7 +18,7 @@ in
     ./metadata.nix
     ./overlays.nix
     ./system.nix
-    ./u-boot.nix
+#    ./u-boot.nix
   ];
 
   options = {
