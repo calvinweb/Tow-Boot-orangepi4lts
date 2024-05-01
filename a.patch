@@ -15,6 +15,7 @@ index 89f2af5e11..7e72d06cda 100644
  / {
 -	model = "Radxa ROCK Pi 4A";
 -	compatible = "radxa,rockpi4a", "radxa,rockpi4", "rockchip,rk3399";
++#include "smbios.dtsi"
 +	compatible = "xunlong,orangepi-4-lts\0rockchip,rk3399";
 +	interrupt-parent = <0x01>;
 +	#address-cells = <0x02>;
