@@ -9,26 +9,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  generate-devices-matrix:
-    name: Generate devices matrix
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: DeterminateSystems/nix-installer-action@v4
-      - id: devices-matrix
-        run: printf "matrix=%s" "$(nix-instantiate --json --eval .ci/devices-list.nix)" >> $GITHUB_OUTPUT
-    outputs:
-      matrix: ${{ steps.devices-matrix.outputs.matrix }}
-
-  build-all-devices:
+  build-orangepi4-lts:
     name: "Build: ${{ matrix.device }}"
-    needs: generate-devices-matrix
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        device: ${{ fromJson(needs.generate-devices-matrix.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -39,13 +22,13 @@ jobs:
         if: "startsWith(github.ref, 'refs/tags/') && github.event_name != 'pull_request'"
         run: |
           nix-build \
-            -A ${{ matrix.device }}.build.archive
+            -A : radxa-RockPi4.build.archive
       - name: Build archive (CI)
         if: "!(startsWith(github.ref, 'refs/tags/') && github.event_name != 'pull_request')"
         run: |
           nix-build \
             --arg configuration "{ lib, ... }: { Tow-Boot.releaseIdentifier = lib.mkForce ''-CI''; }" \
-            -A ${{ matrix.device }}.build.archive
+            -A radxa-RockPi4.build.archive
       - name: Rename archive
         run: |
           archive=$(readlink -f result)
