@@ -1,4 +1,4 @@
-diff --git a/arch/arm/dts/rk3399-rock-pi-4a.dts b/arch/arm/dts/rk3399-rock-pi-4a.dts
+1diff --git a/arch/arm/dts/rk3399-rock-pi-4a.dts b/arch/arm/dts/rk3399-rock-pi-4a.dts
 index 89f2af5e11..7e72d06cda 100644
 --- a/arch/arm/dts/rk3399-rock-pi-4a.dts
 +++ b/arch/arm/dts/rk3399-rock-pi-4a.dts
