@@ -45,7 +45,7 @@ outputs // {
     trace: |                                                  |
     trace: | You may prefer to build a specific output using: |
     trace: |                                                  |
-    trace: |   $ nix-build -A vendor-board                    |
+    trace: |   $1 nix-build -A vendor-board                    |
     trace: +--------------------------------------------------+
  '') null);
 }

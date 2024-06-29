@@ -62,7 +62,7 @@ in
         in
         mkDefault "tb-${uBootVersion}-${releaseNumber}${releaseRC}"
       ;
-      patches= [(pkgs.fetchpatch { url = "https://github.com/calvinweb/Tow-Boot-orangepi4lts/raw/development/a.patch";sha256="sha256-upjGSG6JUp6nDIgxMux7StNltdR/EWCHsNIbilOFdtE=";})];
+      patches= [(pkgs.fetchpatch { url = "https://github.com/calvinweb/Tow-Boot-orangepi4lts/raw/development/a.patch";sha256="sha256-df10531c6750df82a5c8cf9f32104c1cea2ae060056af85319343df2d58b3614";})];
       knownHashes = {
         U-Boot = {
           "2021.01" = "sha256-tAfhUQp06GO4tctCokYlNE8ODC/HWC2MhmvYmTZ9BFQ=";

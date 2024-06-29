@@ -15,7 +15,7 @@
   };
 
   Tow-Boot = {
-    defconfig = lib.mkDefault "rock-pi-4-rk3399_defconfig";
+    defconfig = lib.mkDefault "orangepi-4-rk3399_defconfig";
     config = [
       (helpers: with helpers; {
         USE_PREBOOT = yes;
