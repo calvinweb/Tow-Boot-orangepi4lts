@@ -245,7 +245,7 @@ diff --git a/configs/orangepi-4-rk3399_defconfig b/configs/orangepi-4-rk3399_def
 new file mode 100644
 index 00000000..18ec369f
 --- /dev/null
-+++ b/configs/orangepi-4-rk3399_defconfig.
++++ b/configs/orangepi-4-rk3399_defconfig
 @@ -0,0 +1,79 @@
 +CONFIG_ARM=y
 +CONFIG_SKIP_LOWLEVEL_INIT=y
