@@ -25,8 +25,8 @@ in
 {  # Fixes for stock U-Boot
   Tow-Boot.patches = []
   ++ fetchpatch {
-      url = "https://github.com/calvinweb/Tow-Boot-orangepi4lts/raw/development/a.patch";
-      sha256="sha256-2u8wDafd1AwBT9TuQABTOR9eYwHy/VcljbAF+bmWVR8=";
+      url = "../../a.patch";
+      sha256="sha256-ako/KN1cIWDplqN5cIzyF6qAKMhEKHt+QNygRA9Mi+s=";
     }
   ++ optionals (versionOlder uBootVersion "2023.01") [
     # sunxi: Use mmc_get_env_dev only if relevant
